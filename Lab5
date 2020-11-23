@@ -1,0 +1,18 @@
+using System;
+using System.Text.RegularExpressions;
+
+namespace LB5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s = Console.ReadLine();
+            string pattern = @"\w*ВПС*\w";
+            string target = "Видавничо-поліграфічна справа";
+            Regex regex = new Regex(pattern);
+            string result = regex.Replace(s, target);
+            Console.WriteLine(result);
+        }
+    }
+}
